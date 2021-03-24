@@ -1,0 +1,1 @@
+Sprite_Destination.prototype.createBitmap = function() {};
