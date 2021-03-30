@@ -479,23 +479,13 @@ function Game_Avatar() {
 	};
 })();
 
-
-
-try {
 OnlineManager.goOffline = function () {
-  firebase.database().goOffline();
+	firebase.database().goOffline();
+};
+  OnlineManager.goOnline = function () {
+	firebase.database().goOnline();  
 };
 
-OnlineManager.goOnline = function () {
-	
-		firebase.database().goOnline();  
-};
-}catch (error) {
-	console.log("go_offline");
-		OnlineManager.goOffline();}
-
-
-		
 const offlineSwitch = 390;
 const _Game_Switches_setValue = Game_Switches.prototype.setValue;
 Game_Switches.prototype.setValue = function (switchId, value, byOnline) {
